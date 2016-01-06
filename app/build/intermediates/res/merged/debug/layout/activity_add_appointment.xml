@@ -1,0 +1,217 @@
+<!-- updated by JS Lim on 10/25/2015
+    EditText : set single line
+    Save/Clear button : text color
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaf9ffcd"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="edu.uco.jlim4.jlee8.dzhang.Project_DakeZ_JaeheeL_JungsunL.AddAppointmentActivity">
+
+    <EditText
+        android:id="@+id/setupTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:gravity="left"
+        android:hint="@string/title"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:textAlignment="gravity"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/setupMemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/setupTitle"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:gravity="left"
+        android:hint="@string/memo"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:textAlignment="gravity"
+        android:singleLine="true" />
+
+    <CheckBox
+        android:id="@+id/checkAllDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/setupMemo"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:gravity="left|center"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:text="All Day"
+        android:textAlignment="gravity" />
+
+    <TextView
+        android:id="@+id/setupStartDate"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/checkAllDay"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:layout_toLeftOf="@+id/setupStartTime"
+        android:onClick="onDateTimePickerClicked"
+        android:textSize="@dimen/text_size"
+        android:hint="start date"
+        android:padding="@dimen/activity_vertical_margin2"/>
+
+    <TextView
+        android:id="@+id/setupStartTime"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/checkAllDay"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:onClick="onDateTimePickerClicked"
+        android:textSize="@dimen/text_size"
+        android:hint="start time"
+        android:padding="@dimen/activity_vertical_margin2" />
+
+    <TextView
+        android:id="@+id/endDate"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/setupStartDate"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:layout_toLeftOf="@+id/endTime"
+        android:onClick="onDateTimePickerClicked"
+        android:textSize="@dimen/text_size"
+        android:hint="end date"
+        android:padding="@dimen/activity_vertical_margin2" />
+
+    <TextView
+        android:id="@+id/endTime"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/setupStartTime"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:onClick="onDateTimePickerClicked"
+        android:textSize="@dimen/text_size"
+        android:hint="end time"
+        android:padding="@dimen/activity_vertical_margin2" />
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/endDate"
+        android:textSize="@dimen/text_size"
+        android:text="Location"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_below="@id/locationText"
+        android:background="#F4FF81"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"
+        android:text="Click for picking a decent place!"
+        android:textAlignment="gravity" />
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:textSize="@dimen/text_size"
+        android:text="Attendees:" />
+
+    <Button
+        android:id="@+id/buttonAddAttendee"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/label1"
+        android:background="#689F38"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity"
+        />
+
+    <Button
+        android:id="@+id/buttonDeleteAttendee"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label1"
+        android:layout_toLeftOf="@+id/buttonAddAttendee"
+        android:background="#689F38"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="5dp"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity"
+        />
+
+    <ListView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/buttonDeleteAttendee"
+        android:divider="#A5D6A7"
+        android:dividerHeight="2dip"
+        android:layout_below="@id/label1"
+        android:background="#E8F5E9"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:foreground="#000000"
+        android:id = "@+id/attendeeListView">
+    </ListView>
+
+    <TextView
+        android:id="@+id/reminder"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/attendeeListView"
+        android:textSize="@dimen/text_size"
+        android:text="Setting Remider" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/reminder"
+        android:background="#689F38"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Save"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/buttonSave"
+        android:background="#689F38"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:text="Clear"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity" />
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/JaeheeLee/Dropbox/term%20project/JaeheeL_DakeZ_JungsunL/app/src/main/res/layout/activity_add_appointment.xml -->

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Project_DakeZ_JaeheeL_JungsunL</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- added by Jungsun -->
+    <string name="title_activity_add_appointment">Add Appointment</string>
+    <string name="title">Title</string>
+    <string name="memo">Memo</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_add_attendee">Add Attendee</string>
+    <!-- added by Jungsun -->
+
+    <!-- added by Jaehee-->
+    <string name="title_activity_detail_appointment">Appointment Details</string>
+    <color name="spinner_background_color">#f3f2ee</color>
+    <color name="spinner_popupBackground_color">#555555</color>
+    <color name="registertitle">#B7E438 </color>
+    <color name="listview_selected">#282EFF </color>
+    <string name="title_activity_add_attendee_from_contacts">AddAttendeeFromContacts</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="google_maps_key">AIzaSyDTIuBI7O2ZzQ-Vu_yQ6KYZFopWyiX6mME</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <!-- added by Jaehee-->
+
+</resources>

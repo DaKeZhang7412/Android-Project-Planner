@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/listview_selected"></item>
+    <item android:drawable="@color/spinner_popupBackground_color"></item>
+</selector><!-- From: file:/C:/Users/JaeheeLee/Dropbox/term%20project/JaeheeL_DakeZ_JungsunL/app/src/main/res/drawable/listview_item_selector.xml -->

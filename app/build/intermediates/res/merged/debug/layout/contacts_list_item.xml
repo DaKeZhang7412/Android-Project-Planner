@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <!--CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /-->
+
+    <!--TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/contact_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true" /-->
+
+    <!--TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      /-->
+    <!--CheckedTextView
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" /-->
+
+    <CheckedTextView
+        android:id="@+id/contact_name"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:gravity="center_vertical"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        />
+
+
+    <TextView
+        android:layout_below="@+id/contact_name"
+        android:id="@+id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!--extView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/email_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true" /-->
+
+</RelativeLayout><!-- From: file:/C:/Users/JaeheeLee/Dropbox/term%20project/JaeheeL_DakeZ_JungsunL/app/src/main/res/layout/contacts_list_item.xml -->

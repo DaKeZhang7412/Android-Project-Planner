@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.uco.jlim4.jlee8.dzhang.Project_DakeZ_JaeheeL_JungsunL.AddAttendeeActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text= "Attendees : "
+        android:textSize="@dimen/text_size"
+        android:maxLines="2"
+        android:scrollbars="vertical"
+        android:id = "@+id/attendeeList"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:scrollIndicators="right" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id = "@+id/searchName"
+        android:hint="input name"
+        android:layout_marginTop="50dp"
+        android:textSize="@dimen/text_size"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:layout_margin="@dimen/activity_vertical_margin2"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/buttonSearch"
+        android:layout_alignBottom="@id/buttonSearch"
+        android:inputType="textCapWords|textPersonName" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="#689F38"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:text="Search"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity"
+        android:layout_below="@+id/attendeeList"
+        android:layout_toLeftOf="@+id/buttonAdd"
+        android:layout_marginEnd="10dp" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/buttonSearch"
+        android:background="#689F38"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Add"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity"
+        android:layout_alignParentEnd="true" />
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/buttonSearch"
+        android:divider="#A5D6A7"
+        android:dividerHeight="2dip"
+        android:background="#E8F5E9"
+        android:layout_marginTop="@dimen/activity_vertical_margin2"
+        android:foreground="#000000"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:id = "@+id/contactListView">
+    </ListView>
+
+
+    <Button
+        android:id="@+id/buttonAddDirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/contactListView"
+        android:background="#689F38"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Add Directly"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity" />
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/contactListView"
+        android:background="#689F38"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin2"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Done"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity" />
+
+</RelativeLayout><!-- From: file:/C:/Users/JaeheeLee/Dropbox/term%20project/JaeheeL_DakeZ_JungsunL/app/src/main/res/layout/activity_add_attendee_from_contacts.xml -->
